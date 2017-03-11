@@ -1,5 +1,5 @@
 # gnucash
-Latest version of gnucash built using containers
+Latest version of gnucash built in a container
 
 ## Run it
 1. `docker build .`
