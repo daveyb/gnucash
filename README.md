@@ -1,5 +1,6 @@
 # gnucash
-Latest version of gnucash built in a container
+Builds latest version of gnucash in a container
+- includes libdb drivers for mysql, pgsql, and sqlite3
 
 ## Run it (gnucash data will not persist after container is stopped unless you map a volume!)
 1. `docker build .`
