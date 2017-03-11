@@ -10,4 +10,6 @@ RUN $(curl -L $(curl -s https://api.github.com/repos/gnucash/gnucash/releases/la
 
 RUN ./configure && make && make install && ldconfig 
 
-CMD ["tail", "-f", "/dev/null"]
+RUN apt-get install -y gnucash-docs
+
+CMD ["gnucash"]
