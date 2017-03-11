@@ -8,7 +8,6 @@ RUN $(curl -L $(curl -s https://api.github.com/repos/gnucash/gnucash/releases/la
 | jq -r '.assets[] | select(.name | endswith("tar.gz")) | .browser_download_url') \
 | tar xz --strip-components=1)
 
-#    && ./configure --disable-dbi \
 RUN ./configure && make && make install && ldconfig 
 
 CMD ["tail", "-f", "/dev/null"]
